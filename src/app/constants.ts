@@ -1,7 +1,6 @@
 export const DIETARY_RESTRICTIONS = [
   "Vegetarian",
   "Vegan",
-  "Gluten-Free",
   "Dairy-Free",
   "Kosher",
   "Halal",
@@ -16,8 +15,5 @@ export const CUISINES = [
   "Mexican",
   "Indian",
   "Thai",
-  "Mediterranean",
-  "French",
   "American",
-  "Korean",
 ] as const;
