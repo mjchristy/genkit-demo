@@ -1,0 +1,8 @@
+{
+    "name": "Dinner Tonight",
+    "description": "A demo app for Genkit ",
+    "categories": [
+      "Web app"
+    ],
+    "icon": "https://www.gstatic.com/monospace/231115/logo_nextjs.svg"
+  }
