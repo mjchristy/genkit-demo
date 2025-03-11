@@ -158,8 +158,8 @@ export default function Home() {
 
   return (
     <div className="flex gap-5 h-screen p-4 max-w-6xl mx-auto">
-     <Header>Dinner <br></br>Tonight</Header>
-      <Card className="w-72 h-full">
+     <Header className="w-50"></Header>
+      <Card className="w-70 h-full">
         <CardHeader>
           <CardTitle className="text-lg">Preferences</CardTitle>
         </CardHeader>
