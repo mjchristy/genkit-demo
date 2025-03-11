@@ -53,3 +53,8 @@ User's preferences: ${JSON.stringify(request.preferences, null, 2)}
 );
 
 export const POST = appRoute(chatbotFlow);
+
+export async function DELETE(request: Request) {
+  history = [];
+  return Response.json({ message: "History reset" }, { status: 200 });
+}
