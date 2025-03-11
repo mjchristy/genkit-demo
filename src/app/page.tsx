@@ -156,6 +156,18 @@ export default function Home() {
     setIsLoading(false);
   };
 
+  async function resetHistory() {
+    const response = await fetch("/send", {
+      method: "DELETE",
+    });
+
+    if (response.ok) {
+      setMessages([]);
+    } else {
+      console.error("Failed to reset history");
+    }
+  }
+
   return (
     <div className="flex gap-5 h-screen p-4 max-w-6xl mx-auto">
      <Header>Dinner <br></br>Tonight</Header>
@@ -217,6 +229,7 @@ export default function Home() {
               ))}
             </div>
           </div>
+          <button onClick={resetHistory}>Reset</button>
         </CardContent>
       </Card>
 
