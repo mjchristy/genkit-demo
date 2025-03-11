@@ -157,8 +157,8 @@ export default function Home() {
   };
 
   return (
-    <div className="flex gap-5 h-screen p-4 max-w-6xl mx-auto">
-     <Header>Dinner <br></br>Tonight</Header>
+    <div className="grid grid-cols-2 gap-1 h-fit p-4 max-w-fit mx-auto">
+     <Header className="col-span-2">Dinner Tonight</Header>
       <Card className="w-72 h-full">
         <CardHeader>
           <CardTitle className="text-lg">Preferences</CardTitle>

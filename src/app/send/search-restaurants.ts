@@ -114,40 +114,6 @@ const MOCK_DATA: Restaurant[] = [
     avgRating: 4.6,
     cuisine: "Thai",
   },
-  // Mediterranean
-  {
-    name: "Olive Grove",
-    address: "111 Hummus Way",
-    city: "San Francisco",
-    state: "CA",
-    avgRating: 4.3,
-    cuisine: "Mediterranean",
-  },
-  {
-    name: "Mediterranean Delight",
-    address: "222 Falafel Street",
-    city: "San Francisco",
-    state: "CA",
-    avgRating: 4.5,
-    cuisine: "Mediterranean",
-  },
-  // French
-  {
-    name: "Le Petit Bistro",
-    address: "333 Croissant Lane",
-    city: "San Francisco",
-    state: "CA",
-    avgRating: 4.8,
-    cuisine: "French",
-  },
-  {
-    name: "Chez Marie",
-    address: "444 Baguette Boulevard",
-    city: "San Francisco",
-    state: "CA",
-    avgRating: 4.6,
-    cuisine: "French",
-  },
   // American
   {
     name: "Classic Diner",
@@ -164,23 +130,6 @@ const MOCK_DATA: Restaurant[] = [
     state: "CA",
     avgRating: 4.4,
     cuisine: "American",
-  },
-  // Korean
-  {
-    name: "Seoul Kitchen",
-    address: "777 Kimchi Road",
-    city: "San Francisco",
-    state: "CA",
-    avgRating: 4.7,
-    cuisine: "Korean",
-  },
-  {
-    name: "K-BBQ House",
-    address: "888 Bulgogi Street",
-    city: "San Francisco",
-    state: "CA",
-    avgRating: 4.5,
-    cuisine: "Korean",
   },
 ];
 
