@@ -23,13 +23,6 @@
     # Runs when the workspace is (re)started
     onStart = {
       run-cli = "npm run dev:genkit:ui";
-      run-server = "if [ -z \"\${GOOGLE_GENAI_API_KEY}\" ]; then \
-          echo 'No Gemini API key detected, enter a Gemini API key from https://aistudio.google.com/app/apikey:' && \
-          read -s GOOGLE_GENAI_API_KEY && \
-          echo 'You can also set the key in .idx/dev.nix to automatically add to your workspace'
-          export GOOGLE_GENAI_API_KEY; \
-          fi && \
-          npm run dev:next";
     };
   };
 
@@ -39,7 +32,7 @@
         command = [
           "npm"
           "run"
-          "start"
+          "dev:next"
           "--"
           "--port"
           "$PORT"
