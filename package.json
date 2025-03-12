@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "wireit",
+    "dev:next": "GENKIT_ENV=dev next dev --turbopack",
+    "dev:genkit:ui": "pnpm dlx genkit-cli start -- pnpm dlx tsx src/app/send/route.ts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
