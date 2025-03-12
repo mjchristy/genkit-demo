@@ -170,7 +170,8 @@ export default function Home() {
 
   return (
     <div className="flex gap-5 h-screen p-4 max-w-6xl mx-auto">
-     <Header className="w-50"></Header>
+     <Header className="w-50">
+     </Header>
       <Card className="w-70 h-full">
         <CardHeader>
           <CardTitle className="text-lg">Preferences</CardTitle>
@@ -229,7 +230,6 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <button onClick={resetHistory}>Reset</button>
         </CardContent>
       </Card>
 
@@ -366,6 +366,7 @@ export default function Home() {
               className="flex-grow"
             />
             <Button type="submit">Send</Button>
+            <Button variant="outline" className="border-secondary text-secondary hover:bg-secondary/10 hover:text-secondary text-yellow-500" onClick={resetHistory}>Reset</Button>
           </form>
         </CardFooter>
       </Card>
