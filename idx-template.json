@@ -1,5 +1,5 @@
 {
-    "name": "Dinner Tonight",
+    "name": "Dinner Tonight With Input",
     "description": "A demo app for Genkit ",
     "categories": [
       "Web app"
@@ -10,7 +10,7 @@
         "id": "apiKey",
         "name": "API Key",
         "type": "text",
-        "default": "get a key from aistudio.google.com"
+        "required": true
       }
     ]
   }
