@@ -1,4 +1,3 @@
-import { Message, MessageSchema } from "genkit";
 import { appRoute } from "@genkit-ai/next";
 import {
   GenerateResponseChunkSchema,
@@ -8,24 +7,17 @@ import { ai, z } from "./genkit";
 import { generateRecipe } from "./generate-recipe";
 import { searchRestaurants } from "./search-restaurants";
 
-let history: any[] = [];
-
 const chatbotFlow = ai.defineFlow(
   {
     name: "chatbot",
     inputSchema: z.object({
-      message: MessageSchema,
+      message: z.string(),
       preferences: z.any(),
     }),
     outputSchema: GenerateResponseSchema,
     streamSchema: GenerateResponseChunkSchema,
   },
   async (request) => {
-    console.log(history)
-    const pastMessages = [
-      ...history.filter((m) => m.role !== "system"),
-      request.message,
-    ];
     const response = await ai.generate({
       messages: [
         {
@@ -41,13 +33,19 @@ User's preferences: ${JSON.stringify(request.preferences, null, 2)}
             },
           ],
         },
-        ...pastMessages,
+        {
+          role: "user",
+          content: [
+            {
+              text: request.message,
+            },
+          ],
+        },
       ],
       tools: [generateRecipe, searchRestaurants],
       // onChunk: (chunk) => sendChunk(chunk.toJSON()),
       context: { preferences: request.preferences },
     });
-    history = response.messages;
     return response.toJSON();
   }
 );
@@ -55,6 +53,5 @@ User's preferences: ${JSON.stringify(request.preferences, null, 2)}
 export const POST = appRoute(chatbotFlow);
 
 export async function DELETE(request: Request) {
-  history = [];
   return Response.json({ message: "History reset" }, { status: 200 });
 }

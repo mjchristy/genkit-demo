@@ -139,13 +139,13 @@ export default function Home() {
       ],
     };
 
-    setMessages([...messages, userMessage]);
+    setMessages([userMessage]);
     setInputValue("");
 
     const result = await runFlow({
       url: "/send",
       input: {
-        message: userMessage,
+        message: inputValue,
         preferences: {
           dietaryRestrictions,
           preferredCuisines,
@@ -365,7 +365,7 @@ export default function Home() {
               onChange={(e) => setInputValue(e.target.value)}
               className="flex-grow"
             />
-            <Button type="submit">Send</Button>
+            <Button type="submit">Generate</Button>
           </form>
         </CardFooter>
       </Card>
