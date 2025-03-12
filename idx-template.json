@@ -8,7 +8,7 @@
     "params": [
       {
         "id": "apiKey",
-        "name": "API Key",
+        "name": "Gemini API Key from https://g.co/ai/idxGetGeminiKey",
         "type": "text",
         "required": true
       }
