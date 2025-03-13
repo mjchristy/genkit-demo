@@ -95,6 +95,7 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
   const [dietaryRestrictions, setDietaryRestrictions] = useState<string[]>([]);
   const [preferredCuisines, setPreferredCuisines] = useState<string[]>([]);
+  const [preferencesExpanded, setPreferencesExpanded] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -169,14 +170,22 @@ export default function Home() {
   }
 
   return (
-    <div className="flex gap-5 h-screen p-4 max-w-6xl mx-auto">
-     <Header className="w-50">
+    <div className="flex flex-col md:flex-row gap-5 h-screen p-4 max-w-6xl mx-auto">
+     <Header className="w-full md:w-1/5">
      </Header>
-      <Card className="w-70 h-full">
-        <CardHeader>
+      <Card className="w-full md:w-1/4">
+        <CardHeader className="flex flex-row items-center justify-between">
           <CardTitle className="text-lg">Preferences</CardTitle>
+          <Button 
+            variant="ghost" 
+            size="sm" 
+            className="md:hidden"
+            onClick={() => setPreferencesExpanded(!preferencesExpanded)}
+          >
+            {preferencesExpanded ? "Hide" : "Show"}
+          </Button>
         </CardHeader>
-        <CardContent className="space-y-6">
+        <CardContent className={cn("space-y-6", "md:block", preferencesExpanded ? "block" : "hidden")}>
           <div className="space-y-4">
             <h3 className="font-medium">Dietary Restrictions</h3>
             <div className="space-y-2">
@@ -310,7 +319,7 @@ export default function Home() {
                             )}
                             {item.toolResponse?.name === "searchRestaurants" && (
                               <div className="mt-2">
-                                <div className="grid grid-cols-2 gap-2">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                                   {!!item.toolResponse.output &&
                                     Array.isArray(item.toolResponse.output) &&
                                     item.toolResponse.output.map((restaurant, idx) => (
