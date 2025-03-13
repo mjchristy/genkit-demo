@@ -369,7 +369,7 @@ export default function Home() {
             className="flex w-full gap-2"
           >
             <Input
-              placeholder="Type your message..."
+              placeholder="What sounds good..."
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               className="flex-grow"

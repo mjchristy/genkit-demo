@@ -6,6 +6,7 @@
     "dev": "wireit",
     "dev:next": "GENKIT_ENV=dev next dev",
     "dev:genkit:ui": "pnpm dlx genkit-cli start -- pnpm dlx tsx src/app/send/route.ts",
+    "prebuild": "next telemetry disable",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -27,8 +28,8 @@
     }
   },
   "dependencies": {
-    "@genkit-ai/googleai": "^1.0.5",
-    "@genkit-ai/next": "^1.0.5",
+    "@genkit-ai/googleai": "^1.2.0 ",
+    "@genkit-ai/next": "^1.2.0 ",
     "@radix-ui/react-avatar": "^1.1.3",
     "@radix-ui/react-checkbox": "^1.1.4",
     "@radix-ui/react-scroll-area": "^1.2.3",
@@ -36,7 +37,7 @@
     "@tailwindcss/typography": "^0.5.16",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "genkit": "^1.0.5",
+    "genkit": "1.2.0 ",
     "lucide-react": "^0.477.0",
     "next": "15.2.1",
     "react": "^19.0.0",
