@@ -5,6 +5,11 @@ This is a Genkit sample app utilziing the Gemini API.
 The theme of this app is deciding what's for dinner.
 
 ## Installation
+
+```git clone https://github.com/mjchristy/genkit-demo.git```
+
+```cd <path-to-directory```
+
 ```npm install```
 
 ```npm run dev:genkit:ui```
