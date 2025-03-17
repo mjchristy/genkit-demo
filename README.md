@@ -41,5 +41,4 @@ _Then run the Dev UI (in a new tab):_
 
 
 Can't decide what to eat? Let our dinner agent help you decide. With great local restaurant rec's and recipes on demand, you'll be eating in no time.
-# Running the sample
 
