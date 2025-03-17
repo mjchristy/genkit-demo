@@ -15,11 +15,13 @@ The theme of this app is deciding what's for dinner.
 #### Install the dependencies
 ```npm install```
 
-### Add the Gemini API key and run the app with Genkit
+### Add the Gemini API key and run the app
 
 ```export GEMINI_API_KEY=<your-api-key-no-quotes>```
 
 ```npm run dev:genkit:ui```
+
+```npm run dev:next```
 
 ## The app
 
