@@ -1,10 +1,15 @@
-# genkit-demo
+# Dinner Tonight
 
-This is a sample app utilziing the Gemini API.
+This is a Genkit sample app utilziing the Gemini API.
 
 The theme of this app is deciding what's for dinner.
 
-# Dinner Tonight
+## Installation
+```npm install```
+
+```npm run dev:genkit:ui```
+
+## The app
 
 Can't decide what to eat? Let our dinner agent help you decide. With great local restaurant rec's and recipes on demand, you'll be eating in no time.
 # Running the sample
