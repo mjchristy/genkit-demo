@@ -28,11 +28,17 @@ _This can be tested in IDX(beta), Google's web-based IDE:_
 
 ```export GEMINI_API_KEY=<your-api-key-no-quotes>```
 
-```npm run dev:genkit:ui```
-
 ```npm run dev:next```
 
+_Then run the Dev UI (in a new tab):_
+
+```npm run dev:genkit:ui```
+
+
 ## The app
+
+<img width="1354" alt="image" src="https://github.com/user-attachments/assets/a67d42ae-b859-4e04-9e74-30b0d4a59ca7" />
+
 
 Can't decide what to eat? Let our dinner agent help you decide. With great local restaurant rec's and recipes on demand, you'll be eating in no time.
 # Running the sample
