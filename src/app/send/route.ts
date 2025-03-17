@@ -7,9 +7,9 @@ import { ai, z } from "./genkit";
 import { generateRecipe } from "./generate-recipe";
 import { searchRestaurants } from "./search-restaurants";
 
-const chatbotFlow = ai.defineFlow(
+const dinnerSuggestionFlow = ai.defineFlow(
   {
-    name: "chatbot",
+    name: "dinnerSuggestion",
     inputSchema: z.object({
       message: z.string(),
       preferences: z.any(),
@@ -50,7 +50,7 @@ User's preferences: ${JSON.stringify(request.preferences, null, 2)}
   }
 );
 
-export const POST = appRoute(chatbotFlow);
+export const POST = appRoute(dinnerSuggestionFlow);
 
 export async function DELETE(request: Request) {
   return Response.json({ message: "History reset" }, { status: 200 });
