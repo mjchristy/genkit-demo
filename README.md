@@ -8,7 +8,7 @@ The theme of this app is deciding what's for dinner.
 
 ```git clone https://github.com/mjchristy/genkit-demo.git```
 
-```cd <path-to-directory>```
+```cd genkit-demo>```
 
 ```npm install```
 
