@@ -18,7 +18,7 @@
     # Runs when a workspace is first created
     onCreate = {
       npm-install = "npm ci --no-audit --prefer-offline --no-progress --timing";
-      default.openFiles = [ "README.md" "src/terminal.ts" ];
+      default.openFiles = [ "src/app/send/routes.ts" "src/terminal.ts" ];
     };
     # Runs when the workspace is (re)started
     onStart = {
