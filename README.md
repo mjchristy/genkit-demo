@@ -24,13 +24,13 @@ _This can be tested in IDX(beta), Google's web-based IDE:_
 #### Install the dependencies
 ```npm install```
 
-### Add the Gemini API key and run the app
-
-```export GEMINI_API_KEY=<your-api-key-no-quotes>```
+### Run the app
 
 ```npm run dev:next```
 
 _Then run the Dev UI (in a new tab):_
+
+```export GEMINI_API_KEY=<your-api-key-no-quotes>```
 
 ```npm run dev:genkit:ui```
 
